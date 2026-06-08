@@ -1,0 +1,31 @@
+.about-section {
+    padding: 100px 0;
+    background: #0b0b0b;
+    color: #fff;
+}
+
+.about-img {
+    width: 260px;
+    border-radius: 12px;
+    border: 3px solid #00ffd5;
+    box-shadow: 0 0 25px rgba(0,255,213,0.5);
+}
+
+.highlight {
+    color: #00ffd5;
+}
+
+.skills span {
+    display: inline-block;
+    background: #111;
+    border: 1px solid #00ffd5;
+    padding: 6px 14px;
+    margin: 5px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.skills span:hover {
+    background: #00ffd5;
+    color: black;
+}

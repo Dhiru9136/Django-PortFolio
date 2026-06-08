@@ -1,0 +1,177 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section id="projects" class="projects-section py-5">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <h2 class="section-title">My Projects</h2>
+            <p class="text-light">
+                Some of the projects I've worked on professionally and personally.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- MahaVastra -->
+<div class="col-lg-4 col-md-6">
+    <div class="card project-card h-100">
+        <div class="card-body">
+
+            <h4>MahaVastra</h4>
+
+            <p>
+                Developed and maintained the complete frontend of a multi-role
+                e-commerce platform supporting Buyers, Sellers, and Admins.
+                Built 25+ responsive components including product listing,
+                product details, shopping cart, checkout, order tracking,
+                authentication, seller onboarding, and KYC verification.
+                Integrated REST APIs, implemented role-based access control
+                (RBAC), product search, filtering, pagination, and real-time
+                cart synchronization to deliver a seamless user experience.
+            </p>
+
+            <div class="tech-stack">
+                <span>React.js</span>
+                <span>JavaScript</span>
+                <span>REST API</span>
+                <span>React Router</span>
+                <span>Material UI</span>
+                <span>RBAC</span>
+                <span>Postman</span>
+                <span>Git</span>
+            </div>
+
+            <button class="btn btn-outline-info mt-3">
+                Company Project
+            </button>
+
+        </div>
+    </div>
+</div>
+
+            <!-- ELINKJAL -->
+            <!-- ELINKJAL -->
+<div class="col-lg-4 col-md-6">
+    <div class="card project-card h-100">
+        <div class="card-body">
+
+            <h4>ELINKJAL-NRW</h4>
+
+            <p>
+                Developed and maintained a full-stack water distribution
+                management system for Non-Revenue Water (NRW) monitoring.
+                Built RESTful APIs using Django REST Framework, implemented
+                backend business logic with Django ORM, optimized PostgreSQL
+                queries for large-scale datasets, and integrated Ajax-based
+                asynchronous updates for improved user experience. Contributed
+                to testing, debugging, performance optimization, and
+                post-deployment support.
+            </p>
+
+            <div class="tech-stack">
+                <span>Python</span>
+                <span>Django</span>
+                <span>DRF</span>
+                <span>PostgreSQL</span>
+                <span>JavaScript</span>
+                <span>Ajax</span>
+                <span>Postman</span>
+                <span>Git</span>
+            </div>
+
+            <button class="btn btn-outline-info mt-3">
+                Company Project
+            </button>
+
+        </div>
+    </div>
+</div>
+            <!-- Shopee -->
+            <div class="col-lg-4 col-md-6">
+    <div class="card project-card h-100">
+        <div class="card-body">
+
+            <h4>Shopee E-Commerce</h4>
+
+            <p>
+                Developed a full-featured e-commerce web application using
+                Django and SQLite with secure user authentication, product
+                catalog management, shopping cart, and checkout functionality.
+                Designed and implemented an admin dashboard with complete CRUD
+                operations for products and orders. Utilized Django ORM for
+                efficient database management and built a fully responsive UI
+                using Bootstrap to provide a seamless shopping experience.
+            </p>
+
+            <div class="tech-stack">
+                <span>Python</span>
+                <span>Django</span>
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>Bootstrap</span>
+                <span>SQLite</span>
+                <span>Django ORM</span>
+                <span>GitHub</span>
+            </div>
+
+            <a href="https://github.com/Dhiru9136/Shopeeproject"
+               target="_blank"
+               class="btn btn-outline-success mt-3">
+                View Code
+            </a>
+
+        </div>
+    </div>
+</div>
+
+        </div>
+
+    </div>
+</section>
+
+<style>
+.projects-section{
+    background:#0d1117;
+    min-height:100vh;
+}
+
+.section-title{
+    color:#00ffe1;
+    font-weight:700;
+}
+
+.project-card{
+    background:#161b22;
+    color:white;
+    border:1px solid #00ffe1;
+    transition:0.4s ease;
+}
+
+.project-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 20px rgba(0,255,225,.4);
+}
+
+.project-card h4{
+    color:#00ffe1;
+    margin-bottom:15px;
+}
+
+.tech-stack{
+    margin-top:15px;
+}
+
+.tech-stack span{
+    display:inline-block;
+    margin:4px;
+    padding:6px 12px;
+    border:1px solid #00ffe1;
+    border-radius:20px;
+    font-size:13px;
+}
+</style>
+
+{% endblock %}

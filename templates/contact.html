@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<section class="contact-section section">
+    <div class="container">
+        <h2 class="text-center mb-5 highlight">Contact Me</h2>
+        <div class="row justify-content-center">
+            <!-- Contact Form -->
+            <div class="col-lg-6 col-md-8">
+                <form class="contact-form" method="post" action="">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="your.email@example.com" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="subject" class="form-label">Subject</label>
+                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-warning fw-semibold px-4">Send Message</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="col-lg-4 col-md-8 mt-5 mt-lg-0">
+                <div class="contact-info p-4 rounded">
+                    <h5 class="fw-bold highlight">Get in Touch</h5>
+                    <p>Email: <a href="mailto:palmdhiraj91@gmail.com" class="text-dark text-decoration-none">palmdhiraj91@gmail.com</a></p>
+                    <p>Phone: <a href="tel:+919136325619" class="text-dark text-decoration-none">+91913632XXXX</a></p>
+                    <p>Location: Mumbai, India</p>
+                    <div class="d-flex gap-3 mt-3 fs-5">
+                        <a href="https://github.com/Dhiru9136" class="text-dark"><i class="bi bi-github"></i></a>
+                        <a href="https://www.linkedin.com/in/dhiraj-pal-344789370" class="text-dark"><i class="bi bi-linkedin"></i></a>
+                        <a href="mailto:palmdhiraj91@gmail.com" class="text-dark"><i class="bi bi-envelope-fill"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

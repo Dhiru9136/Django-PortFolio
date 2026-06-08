@@ -1,0 +1,52 @@
+{% load static %}
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm fixed-top">
+  <div class="container">
+
+    <!-- Logo / Name -->
+    <a class="navbar-brand fw-bold" href="{% url 'home' %}">
+      Dhiraj Pal
+    </a>
+
+    <!-- Mobile Toggle -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarNav" aria-controls="navbarNav"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu Items -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'home' %}">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'about' %}">About</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'skills' %}">Skills</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'projects' %}">Projects</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+        </li>
+
+        <!-- Resume Button -->
+        <li class="nav-item ms-lg-3">
+          <a class="btn btn-warning btn-sm fw-semibold px-3" href="{% static 'resume/CV _DHIRAJ PAL .pdf' %}" target="_blank">
+            Resume
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>

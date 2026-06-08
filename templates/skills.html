@@ -1,0 +1,139 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+
+<style>
+#skills{
+    min-height:100vh;
+    background:#0d1117;
+    color:white;
+    padding:80px 0;
+}
+
+.div-title{
+    color:#00ffe1;
+    font-weight:700;
+}
+
+.skill-card{
+    background:#161b22;
+    color:white;
+    border:1px solid #00ffe1;
+    border-radius:15px;
+    transition:0.4s;
+}
+
+.skill-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 20px rgba(0,255,225,.4);
+}
+
+.skill-card h4{
+    color:#00ffe1;
+    margin-bottom:15px;
+}
+</style>
+
+<div id="skills" class="div py-5">
+    <div class="container">
+
+        <h2 class="text-center mb-5 div-title">
+            Technical Skills
+        </h2>
+
+        <div class="row g-4">
+
+            <!-- Frontend -->
+            <div class="col-md-4">
+                <div class="card skill-card h-100">
+                    <div class="card-body">
+                        <h4>Frontend</h4>
+                        <p>
+                            React.js, HTML5, CSS3, Bootstrap,
+                            JavaScript (ES6+), Responsive Design,
+                            React Router
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Backend -->
+            <div class="col-md-4">
+                <div class="card skill-card h-100">
+                    <div class="card-body">
+                        <h4>Backend</h4>
+                        <p>
+                            Python, Django, Django REST Framework,
+                            Flask, FastAPI, REST APIs,
+                            Authentication & Authorization
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Database -->
+            <div class="col-md-4">
+                <div class="card skill-card h-100">
+                    <div class="card-body">
+                        <h4>Database</h4>
+                        <p>
+                            PostgreSQL, MySQL, SQLite,
+                            Django ORM, Query Optimization
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- API & Testing -->
+            <div class="col-md-4">
+                <div class="card skill-card h-100">
+                    <div class="card-body">
+                        <h4>API & Testing</h4>
+                        <p>
+                            REST API, Postman,
+                            Thunder Client, Ajax,
+                            JSON Handling
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tools -->
+            <div class="col-md-4">
+                <div class="card skill-card h-100">
+                    <div class="card-body">
+                        <h4>Tools</h4>
+                        <p>
+    Git, GitHub, VS Code,
+    ChatGPT, GitHub Copilot,
+    Claude AI, Prompt Engineering,
+    AI-Assisted Development,
+    Debugging & Code Review
+</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Concepts -->
+            <div class="col-md-4">
+                <div class="card skill-card h-100">
+                    <div class="card-body">
+                        <h4>Concepts</h4>
+                        <p>
+                            RBAC, JWT, OAuth,
+                            OOPs, CRUD,
+                            MVC Architecture
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+  </div>
+
+{% endblock %}

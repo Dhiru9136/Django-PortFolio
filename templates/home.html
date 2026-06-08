@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section style="height:100vh;display:flex;justify-content:center;align-items:center;text-align:center;background:#000;color:white;">
+    <div>
+        <h1>Hi, I'm <span style="color:#00ffe1;">Dhiraj Pal</span></h1>
+        <h3 class="typing">Python | Django Developer</h3>
+        <img src="{% static 'images/Dhiraj.jpg' %}" style="width:200px;border-radius:50%;border:4px solid #00ffe1;margin-top:20px;">
+    </div>
+</section>
+
+<style>
+.typing{
+    border-right:3px solid #00ffe1;
+    white-space:nowrap;
+    overflow:hidden;
+    width:0;
+    animation:typing 4s steps(30,end) forwards, blink .8s infinite;
+}
+@keyframes typing{to{width:100%}}
+@keyframes blink{50%{border-color:transparent}}
+</style>
+
+{% endblock %}
