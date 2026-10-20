@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-)=+$)7rr37n9n0uz!*dys0j_dd1mmb83y_g(k0g69!1*997+xd"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1","localhost","10.0.2.15","innovation-ext-chargers-exercises.trycloudflare.com"]
+# ALLOWED_HOSTS = ["127.0.0.1","localhost","10.0.2.15","innovation-ext-chargers-exercises.trycloudflare.com"]
 
 
 # Application definition
@@ -42,7 +42,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
-    "whitenoise.middleware.WhiteNoiseMiddleware",
+    # "whitenoise.middleware.WhiteNoiseMiddleware",
 
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -70,7 +70,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "portfolio.wsgi.application"
+# WSGI_APPLICATION = "portfolio.wsgi.application"
 
 
 # Database

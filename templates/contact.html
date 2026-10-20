@@ -1,51 +1,370 @@
 {% extends 'base.html' %}
+
 {% block content %}
 
-<section class="contact-section section">
+<section class="contact-section">
     <div class="container">
-        <h2 class="text-center mb-5 highlight">Contact Me</h2>
-        <div class="row justify-content-center">
+
+        <!-- Heading -->
+        <div class="text-center mb-5">
+            <h2 class="section-title">Contact Me</h2>
+            <p class="section-subtitle">
+                Have a project or job opportunity in mind?
+                Feel free to get in touch.
+            </p>
+        </div>
+
+        <div class="row justify-content-center g-4">
+
             <!-- Contact Form -->
-            <div class="col-lg-6 col-md-8">
-                <form class="contact-form" method="post" action="">
-                    {% csrf_token %}
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Name</label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="your.email@example.com" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="subject" class="form-label">Subject</label>
-                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="message" class="form-label">Message</label>
-                        <textarea class="form-control" id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
-                    </div>
-                    <div class="text-center">
-                        <button type="submit" class="btn btn-warning fw-semibold px-4">Send Message</button>
-                    </div>
-                </form>
+            <div class="col-lg-7 col-md-10">
+
+                <div class="contact-card">
+                    <h4 class="card-title">Send Me a Message</h4>
+
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert alert-{{ message.tags }} alert-dismissible fade show"
+                                 role="alert">
+                                {{ message }}
+                                <button type="button"
+                                        class="btn-close"
+                                        data-bs-dismiss="alert"
+                                        aria-label="Close"></button>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+
+                    <form method="post" action="">
+                        {% csrf_token %}
+
+                        <div class="mb-3">
+                            <label for="name" class="form-label">
+                                Full Name
+                            </label>
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="name"
+                                name="name"
+                                placeholder="Enter your full name"
+                                maxlength="100"
+                                autocomplete="name"
+                                required
+                            >
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">
+                                Email Address
+                            </label>
+                            <input
+                                type="email"
+                                class="form-control"
+                                id="email"
+                                name="email"
+                                placeholder="your.email@example.com"
+                                maxlength="254"
+                                autocomplete="email"
+                                required
+                            >
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">
+                                Subject
+                            </label>
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="subject"
+                                name="subject"
+                                placeholder="Enter the subject"
+                                maxlength="150"
+                                required
+                            >
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="message" class="form-label">
+                                Message
+                            </label>
+                            <textarea
+                                class="form-control"
+                                id="message"
+                                name="message"
+                                rows="5"
+                                placeholder="Write your message here..."
+                                maxlength="5000"
+                                required
+                            ></textarea>
+                        </div>
+
+                        <button type="submit"
+                                class="btn btn-contact w-100">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
             </div>
 
-            <!-- Contact Info -->
-            <div class="col-lg-4 col-md-8 mt-5 mt-lg-0">
-                <div class="contact-info p-4 rounded">
-                    <h5 class="fw-bold highlight">Get in Touch</h5>
-                    <p>Email: <a href="mailto:palmdhiraj91@gmail.com" class="text-dark text-decoration-none">palmdhiraj91@gmail.com</a></p>
-                    <p>Phone: <a href="tel:+919136325619" class="text-dark text-decoration-none">+91913632XXXX</a></p>
-                    <p>Location: Mumbai, India</p>
-                    <div class="d-flex gap-3 mt-3 fs-5">
-                        <a href="https://github.com/Dhiru9136" class="text-dark"><i class="bi bi-github"></i></a>
-                        <a href="https://www.linkedin.com/in/dhiraj-pal-344789370" class="text-dark"><i class="bi bi-linkedin"></i></a>
-                        <a href="mailto:palmdhiraj91@gmail.com" class="text-dark"><i class="bi bi-envelope-fill"></i></a>
+            <!-- Contact Information -->
+            <div class="col-lg-4 col-md-10">
+
+                <div class="contact-card contact-info">
+                    <h4 class="card-title">Get in Touch</h4>
+
+                    <p class="info-description">
+                        I'm open to discussing Python backend development
+                        opportunities, web applications, and professional
+                        collaborations.
+                    </p>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="bi bi-envelope-fill"></i>
+                        </div>
+                        <div>
+                            <h6>Email</h6>
+                            <a href="mailto:palmdhiraj91@gmail.com">
+                                palmdhiraj91@gmail.com
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="bi bi-telephone-fill"></i>
+                        </div>
+                        <div>
+                            <h6>Phone</h6>
+                            <a href="tel:+919136325619">
+                                +91 91363 25619
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </div>
+                        <div>
+                            <h6>Location</h6>
+                            <p>Mumbai, Maharashtra, India</p>
+                        </div>
+                    </div>
+
+                    <hr class="contact-divider">
+
+                    <h6 class="social-title">Connect With Me</h6>
+
+                    <div class="social-links">
+                        <a href="https://github.com/Dhiru9136"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="GitHub">
+                            <i class="bi bi-github"></i>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/dhiraj-pal-344789370"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="LinkedIn">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+
+                        <a href="mailto:palmdhiraj91@gmail.com"
+                           aria-label="Email">
+                            <i class="bi bi-envelope-fill"></i>
+                        </a>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
 </section>
+
+<style>
+.contact-section {
+    min-height: 100vh;
+    padding: 80px 0;
+    background: #0d1117;
+    color: #e6edf3;
+}
+
+.section-title {
+    color: #00ffe1;
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    color: #9da7b3;
+    line-height: 1.7;
+}
+
+.contact-card {
+    height: 100%;
+    padding: 30px;
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 16px;
+    transition: border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+    border-color: rgba(0, 255, 225, 0.65);
+    box-shadow: 0 0 20px rgba(0, 255, 225, 0.08);
+}
+
+.card-title {
+    color: #00ffe1;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.form-label {
+    color: #e6edf3;
+    font-weight: 500;
+}
+
+.form-control {
+    padding: 12px 14px;
+    color: #e6edf3;
+    background: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+}
+
+.form-control::placeholder {
+    color: #7d8590;
+}
+
+.form-control:focus {
+    color: #ffffff;
+    background: #0d1117;
+    border-color: #00ffe1;
+    box-shadow: 0 0 0 0.2rem rgba(0, 255, 225, 0.12);
+}
+
+textarea.form-control {
+    resize: vertical;
+}
+
+.btn-contact {
+    padding: 12px 20px;
+    background: #00ffe1;
+    color: #0d1117;
+    font-weight: 700;
+    border: 1px solid #00ffe1;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.btn-contact:hover {
+    background: transparent;
+    color: #00ffe1;
+}
+
+.info-description {
+    color: #9da7b3;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 24px;
+}
+
+.info-icon {
+    min-width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #00ffe1;
+    background: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.info-item h6 {
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.info-item p,
+.info-item a {
+    color: #9da7b3;
+    font-size: 14px;
+    margin-bottom: 0;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.info-item a:hover {
+    color: #00ffe1;
+}
+
+.contact-divider {
+    border-color: #30363d;
+    margin: 25px 0;
+}
+
+.social-title {
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.social-links {
+    display: flex;
+    gap: 12px;
+}
+
+.social-links a {
+    width: 43px;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #00ffe1;
+    background: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 10px;
+    font-size: 19px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.social-links a:hover {
+    background: #00ffe1;
+    color: #0d1117;
+    border-color: #00ffe1;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 50px 0;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .contact-card {
+        padding: 22px;
+    }
+}
+</style>
+
 {% endblock %}

@@ -3,130 +3,216 @@
 
 {% block content %}
 
-
-
 <style>
-#skills{
-    min-height:100vh;
-    background:#0d1117;
-    color:white;
-    padding:80px 0;
+#skills {
+    min-height: 100vh;
+    background: #0d1117;
+    color: #e6edf3;
+    padding: 80px 0;
 }
 
-.div-title{
-    color:#00ffe1;
-    font-weight:700;
+.div-title {
+    color: #00ffe1;
+    font-weight: 700;
+    font-size: 2.3rem;
 }
 
-.skill-card{
-    background:#161b22;
-    color:white;
-    border:1px solid #00ffe1;
-    border-radius:15px;
-    transition:0.4s;
+.skills-subtitle {
+    color: #9da7b3;
+    text-align: center;
+    margin-top: -30px;
+    margin-bottom: 45px;
 }
 
-.skill-card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 0 20px rgba(0,255,225,.4);
+.skill-card {
+    background: #161b22;
+    color: #e6edf3;
+    border: 1px solid #30363d;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    overflow: hidden;
 }
 
-.skill-card h4{
-    color:#00ffe1;
-    margin-bottom:15px;
+.skill-card:hover {
+    transform: translateY(-7px);
+    border-color: #00ffe1;
+    box-shadow: 0 0 20px rgba(0, 255, 225, 0.18);
+}
+
+.skill-card .card-body {
+    padding: 28px;
+}
+
+.skill-icon {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.skill-card h4 {
+    color: #00ffe1;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.skill-card p {
+    color: #c9d1d9;
+    line-height: 1.9;
+    margin-bottom: 0;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tags span {
+    display: inline-block;
+    background: #0d1117;
+    color: #c9d1d9;
+    border: 1px solid #30363d;
+    border-radius: 20px;
+    padding: 6px 11px;
+    font-size: 13px;
+    transition: 0.3s ease;
+}
+
+.skill-tags span:hover {
+    color: #00ffe1;
+    border-color: #00ffe1;
+}
+
+@media (max-width: 768px) {
+    #skills {
+        padding: 55px 0;
+    }
+
+    .div-title {
+        font-size: 1.9rem;
+    }
+
+    .skill-card .card-body {
+        padding: 22px;
+    }
 }
 </style>
 
-<div id="skills" class="div py-5">
+<section id="skills">
     <div class="container">
 
         <h2 class="text-center mb-5 div-title">
             Technical Skills
         </h2>
 
+        <p class="skills-subtitle">
+            Technologies and tools I use to build web applications
+            and backend systems.
+        </p>
+
         <div class="row g-4">
 
-            <!-- Frontend -->
-            <div class="col-md-4">
+            <!-- Programming Languages -->
+            <div class="col-md-6 col-lg-4">
                 <div class="card skill-card h-100">
                     <div class="card-body">
-                        <h4>Frontend</h4>
-                        <p>
-                         HTML5, CSS3, Bootstrap,
-                            JavaScript (ES6+), Responsive Design,
-                            
-                        </p>
+                        <div class="skill-icon">⌨️</div>
+                        <h4>Programming Languages</h4>
+                        <div class="skill-tags">
+                            <span>Python</span>
+                            <span>SQL</span>
+                            <span>JavaScript</span>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Backend -->
-            <div class="col-md-4">
+            <!-- Backend Development -->
+            <div class="col-md-6 col-lg-4">
                 <div class="card skill-card h-100">
                     <div class="card-body">
-                        <h4>Backend</h4>
-                        <p>
-                            Python, Django, Django REST Framework,
-                            Flask, FastAPI, REST APIs,
-                            Authentication & Authorization
-                        </p>
+                        <div class="skill-icon">⚙️</div>
+                        <h4>Backend Development</h4>
+                        <div class="skill-tags">
+                            <span>Django</span>
+                            <span>Django REST Framework</span>
+                            <span>FastAPI</span>
+                            <span>Django Channels</span>
+                            <span>WebSockets</span>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Database -->
-            <div class="col-md-4">
+            <div class="col-md-6 col-lg-4">
                 <div class="card skill-card h-100">
                     <div class="card-body">
-                        <h4>Database</h4>
-                        <p>
-                            PostgreSQL, MySQL, SQLite,
-                            Django ORM, Query Optimization
-                        </p>
+                        <div class="skill-icon">🗄️</div>
+                        <h4>Database & ORM</h4>
+                        <div class="skill-tags">
+                            <span>PostgreSQL</span>
+                            <span>SQLite</span>
+                            <span>Django ORM</span>
+                            <span>psycopg2</span>
+                            <span>Raw SQL</span>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- API & Testing -->
-            <div class="col-md-4">
+            <!-- API & Security -->
+            <div class="col-md-6 col-lg-4">
                 <div class="card skill-card h-100">
                     <div class="card-body">
-                        <h4>API & Testing</h4>
-                        <p>
-                            REST API, Postman,
-                            Thunder Client, Ajax,
-                            JSON Handling
-                        </p>
+                        <div class="skill-icon">🔐</div>
+                        <h4>APIs & Authentication</h4>
+                        <div class="skill-tags">
+                            <span>RESTful APIs</span>
+                            <span>CRUD Operations</span>
+                            <span>Authentication</span>
+                            <span>RBAC</span>
+                            <span>OTP Verification</span>
+                            <span>SMTP Email</span>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Tools -->
-            <div class="col-md-4">
+            <!-- Frontend -->
+            <div class="col-md-6 col-lg-4">
                 <div class="card skill-card h-100">
                     <div class="card-body">
-                        <h4>Tools</h4>
-                        <p>
-    Git, GitHub, VS Code,
-    ChatGPT, GitHub Copilot,
-    Claude AI, Prompt Engineering,
-    AI-Assisted Development,
-    Debugging & Code Review
-</p>
+                        <div class="skill-icon">🌐</div>
+                        <h4>Frontend & Visualization</h4>
+                        <div class="skill-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript (AJAX)</span>
+                            <span>Bootstrap</span>
+                            <span>Chart.js</span>
+                            <span>Leaflet Maps</span>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Concepts -->
-            <div class="col-md-4">
+            <!-- Development Tools -->
+            <div class="col-md-6 col-lg-4">
                 <div class="card skill-card h-100">
                     <div class="card-body">
-                        <h4>Concepts</h4>
-                        <p>
-                            RBAC, JWT, OAuth,
-                            OOPs, CRUD,
-                            MVC Architecture
-                        </p>
+                        <div class="skill-icon">🛠️</div>
+                        <h4>Tools & Development</h4>
+                        <div class="skill-tags">
+                            <span>Git</span>
+                            <span>GitHub</span>
+                            <span>Postman</span>
+                            <span>JSON</span>
+                            <span>API Testing</span>
+                            <span>Debugging</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -134,6 +220,6 @@
         </div>
 
     </div>
-  </div>
+</section>
 
 {% endblock %}

@@ -1,3 +1,4 @@
+
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
@@ -8,136 +9,348 @@
     <div class="container">
         <div class="row align-items-center">
 
-            <!-- LEFT IMAGE -->
+            <!-- LEFT: PROFILE -->
             <div class="col-lg-5 text-center mb-4">
-                <img src="{% static 'images/Dhiraj.jpg' %}" class="about-img" alt="Dhiraj Pal">
+                <img
+                    src="{% static 'images/Dhiraj.jpg' %}"
+                    class="about-img"
+                    alt="Dhiraj Pal - Python Backend Developer"
+                >
 
                 <div class="mt-4">
                     <h3 class="name">Dhiraj Pal</h3>
-                    <h5 class="typing-text">Python Django Developer </h5>
+                    <h5 class="typing-text">
+                        Python Backend Developer
+                    </h5>
+
+                    <p class="profile-location mt-3">
+                        Mumbai, Maharashtra, India
+                    </p>
                 </div>
             </div>
 
-            <!-- RIGHT CONTENT -->
+            <!-- RIGHT: ABOUT ME -->
             <div class="col-lg-7">
                 <h2 class="section-title">About Me</h2>
 
                 <p>
-                    I'm <span class="highlight">Dhiraj Pal</span>, a B.Sc. IT graduate and
-                    passionate Full Stack Developer from Mumbai. I specialize in
-                    building scalable web applications using
-                    <strong>Python, Django, Django REST Framework, and PostgreSQL.</strong>
+                    Hi, I'm <span class="highlight">Dhiraj Pal</span>,
+                    a B.Sc. IT graduate and Python Backend Developer
+                    with 1+ year of experience, including internships
+                    and full-time development.
                 </p>
 
                 <p>
-                    Currently working at <strong>Elink Software Technologies</strong>,
-                    where I contribute to live production projects including
-                    <strong>MahaVastra</strong> (Multi-Role E-Commerce Platform) and
-                    <strong>ELINKJAL-NRW</strong> (Water Distribution Management System).
+                    I specialize in building backend applications and
+                    RESTful APIs using
+                    <strong>
+                        Python, Django, Django REST Framework,
+                        FastAPI, and PostgreSQL.
+                    </strong>
+                    I also work with Django ORM, SQL, authentication,
+                    and role-based access control (RBAC).
                 </p>
 
                 <p>
-                    I enjoy developing REST APIs, creating responsive user interfaces,
-                    optimizing databases, and solving real-world business problems through technology.
+                    At <strong>Elink Software Technologies Pvt. Ltd.</strong>,
+                    I worked on
+                    <strong>ELINKJAL – Non-Revenue Water (NRW)
+                    Water Distribution Management System</strong>.
+                    As the sole developer on the project, I handled
+                    the UI, backend, and database, including REST APIs,
+                    hierarchical location management, OTP-based password
+                    reset, interactive maps, and real-time dashboards.
                 </p>
 
-                <!-- Skills -->
-                <div class="skills mt-4">
+                <p>
+                    Previously, as a Jr. Backend Developer Intern at
+                    <strong>Sky Need Solution Pvt. Ltd.</strong>,
+                    I developed an HR Management System using FastAPI
+                    and PostgreSQL, implementing employee CRUD APIs,
+                    attendance tracking, leave management, and email
+                    notifications.
+                </p>
+
+                <p>
+                    I also built a
+                    <strong>Shopee E-Commerce Web Application</strong>
+                    as a college project using Django and SQLite,
+                    featuring user authentication, product search,
+                    price sorting, cart management, and checkout.
+                </p>
+
+                <p>
+                    I enjoy solving backend problems, designing
+                    reliable APIs, working with databases, and
+                    building practical applications. I'm looking
+                    for opportunities as a
+                    <strong>Junior Python Developer, Django Developer,
+                    or Backend Developer.</strong>
+                </p>
+
+                <!-- TECHNICAL SKILLS -->
+                <h4 class="skills-title mt-4">Technical Skills</h4>
+
+                <div class="skills">
                     <span>Python</span>
                     <span>Django</span>
-                    <span>DRF</span>
-                    <!-- <span>React.js</span> -->
-                    <span>JavaScript</span>
+                    <span>Django REST Framework</span>
+                    <span>FastAPI</span>
+                    <span>REST APIs</span>
                     <span>PostgreSQL</span>
-                    <span>MySQL</span>
+                    <span>SQL</span>
+                    <span>Django ORM</span>
+                    <span>SQLite</span>
+                    <span>RBAC</span>
+                    <span>Authentication</span>
+                    <span>OTP Verification</span>
+                    <span>SMTP Email</span>
+                    <span>Django Channels</span>
+                    <span>WebSockets</span>
+                    <span>JavaScript</span>
+                    <span>AJAX</span>
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>Bootstrap</span>
+                    <span>Chart.js</span>
+                    <span>Leaflet</span>
                     <span>Git</span>
-                    <span>REST API</span>
-                    <span>CI/CD</span>
-                    <span>Docker</span>
-                    <span>Numpy</span>
-                    <span>Pandas</span>
+                    <span>GitHub</span>
+                    <span>Postman</span>
                 </div>
 
-                <!-- Stats -->
-                <div class="row mt-5">
+                <!-- EXPERIENCE & PROJECTS -->
+                <div class="row mt-5 stats-row">
+
                     <div class="col-4 text-center">
-                        <h3>8</h3>
-                        <p>Months Experience</p>
+                        <h3>1+</h3>
+                        <p>Year Experience</p>
                     </div>
 
                     <div class="col-4 text-center">
-                        <h3>25+</h3>
-                        <p>Components Built</p>
+                        <h3>3</h3>
+                        <p>Key Projects</p>
                     </div>
 
                     <div class="col-4 text-center">
-                        <h3>3+</h3>
-                        <p>Projects Completed</p>
+                        <h3>2</h3>
+                        <p>Organizations</p>
                     </div>
+
+                </div>
+
+                <!-- LINKS -->
+                <div class="about-links mt-4">
+                    <a
+                        href="https://github.com/Dhiru9136"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        GitHub
+                    </a>
+
+                    <a
+                        href="https://linkedin.com/in/dhiraj-pal-344789370"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        LinkedIn
+                    </a>
+
+                    <a href="mailto:palmdhiraj91@gmail.com">
+                        Contact Me
+                    </a>
                 </div>
 
             </div>
-
         </div>
     </div>
 </section>
 
 <style>
-.about-section{
-    min-height:100vh;
-    background:#0d1117;
-    color:white;
-    display:flex;
-    align-items:center;
-    padding:80px 0;
+.about-section {
+    min-height: 100vh;
+    background: #0d1117;
+    color: #e6edf3;
+    display: flex;
+    align-items: center;
+    padding: 80px 0;
 }
 
-.about-img{
-    width:280px;
-    height:280px;
-    object-fit:cover;
-    border-radius:50%;
-    border:5px solid #00ffe1;
-    box-shadow:0 0 25px #00ffe1;
+.about-img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #00ffe1;
+    box-shadow: 0 0 25px rgba(0, 255, 225, 0.35);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.section-title{
-    color:#00ffe1;
-    margin-bottom:20px;
+.about-img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 35px rgba(0, 255, 225, 0.55);
 }
 
-.highlight{
-    color:#00ffe1;
-    font-weight:bold;
+.name {
+    color: #ffffff;
+    font-weight: 700;
 }
 
-.skills span{
-    display:inline-block;
-    background:#161b22;
-    padding:10px 18px;
-    margin:6px;
-    border-radius:30px;
-    border:1px solid #00ffe1;
+.typing-text {
+    display: table;
+    color: #00ffe1;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid #00ffe1;
+    width: 0;
+    max-width: 100%;
+    margin: 0 auto;
+    animation:
+        typing 4s steps(28, end) forwards,
+        blink 0.8s step-end infinite;
 }
 
-.typing-text{
-    color:#00ffe1;
-    overflow:hidden;
-    white-space:nowrap;
-    border-right:3px solid #00ffe1;
-    width:0;
-    margin:auto;
-    animation:typing 4s steps(35,end) forwards,
-              blink .8s infinite;
+.profile-location {
+    color: #9da7b3;
+    font-size: 14px;
 }
 
-@keyframes typing{
-    from{width:0}
-    to{width:100%}
+.section-title {
+    color: #00ffe1;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 24px;
 }
 
-@keyframes blink{
-    50%{border-color:transparent}
+.about-section p {
+    line-height: 1.8;
+    color: #c9d1d9;
+}
+
+.highlight {
+    color: #00ffe1;
+    font-weight: 700;
+}
+
+.skills-title {
+    color: #00ffe1;
+    font-weight: 600;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 18px;
+}
+
+.skills span {
+    display: inline-block;
+    background: #161b22;
+    color: #dce5ed;
+    padding: 8px 14px;
+    border-radius: 22px;
+    border: 1px solid #30363d;
+    font-size: 13px;
+    transition: all 0.25s ease;
+}
+
+.skills span:hover {
+    color: #00ffe1;
+    border-color: #00ffe1;
+    transform: translateY(-2px);
+}
+
+.stats-row h3 {
+    color: #00ffe1;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.stats-row p {
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+.about-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.about-links a {
+    display: inline-block;
+    color: #00ffe1;
+    text-decoration: none;
+    padding: 9px 18px;
+    border: 1px solid #00ffe1;
+    border-radius: 25px;
+    transition: all 0.25s ease;
+}
+
+.about-links a:hover {
+    background: #00ffe1;
+    color: #0d1117;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@media (max-width: 991px) {
+    .about-section {
+        padding: 55px 0;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+        margin-top: 15px;
+    }
+
+    .about-img {
+        width: 230px;
+        height: 230px;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-section {
+        padding: 40px 0;
+    }
+
+    .about-img {
+        width: 190px;
+        height: 190px;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    .stats-row h3 {
+        font-size: 1.6rem;
+    }
+
+    .stats-row p {
+        font-size: 11px;
+    }
+
+    .skills span {
+        font-size: 12px;
+        padding: 7px 11px;
+    }
 }
 </style>
 
